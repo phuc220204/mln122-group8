@@ -1,0 +1,10 @@
+node_modules
+dist
+
+# local working material – not part of the deployed deck
+.claude
+*.pdf
+/Slide_tham_khao/
+/photos/
+MLN122_Script-thuyet-trinh.md
+MLN122_Noi-dung-slide.md

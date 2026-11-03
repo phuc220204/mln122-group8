@@ -1,0 +1,89 @@
+/* ---------- slide frame ---------- */
+.slide {
+  position: absolute;
+  inset: 0;
+  padding: var(--pad-t) var(--pad-r) 0 var(--pad-l);
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+}
+.slide.is-active { visibility: visible; opacity: 1; z-index: 2; }
+/* inactive slides never show or catch clicks, whatever inline styles an interrupted tween left behind */
+.slide:not(.is-active) { visibility: hidden !important; pointer-events: none; }
+.slide > * { position: relative; z-index: 2; }
+
+/* readability veil between 3D canvas and copy */
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 0% 0%, rgba(10, 11, 13, 0.92) 0%, rgba(10, 11, 13, 0.55) 45%, rgba(10, 11, 13, 0) 75%),
+    linear-gradient(0deg, rgba(10, 11, 13, 0.85) 0%, rgba(10, 11, 13, 0) 22%);
+}
+.slide.veil-heavy::before {
+  background: linear-gradient(90deg, rgba(10, 11, 13, 0.9) 0%, rgba(10, 11, 13, 0.72) 60%, rgba(10, 11, 13, 0.55) 100%);
+}
+.slide.veil-none::before { display: none; }
+
+/* ---------- kicker / title ---------- */
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 500 15px/1 var(--f-mono);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kicker .kn { color: var(--red); font-weight: 700; }
+.kicker .kbar { width: 36px; height: 1px; background: var(--line-2); }
+
+.title {
+  margin-top: 22px;
+  font: 600 72px/1.06 var(--f-display);
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  max-width: 1560px;
+  text-wrap: balance;
+}
+.title.xl { font-size: 116px; line-height: 1.0; letter-spacing: -0.01em; }
+.title.l { font-size: 84px; }
+.title.s { font-size: 64px; }
+.title em { font-style: normal; }
+em.pos, b.pos, .pos-t { color: var(--gold); }
+em.neg, b.neg, .neg-t { color: var(--red); }
+b.data, .data-t { color: var(--blue); }
+b { font-weight: 600; color: var(--ink); }
+
+/* split-text masks (padding keeps Vietnamese stacked diacritics unclipped) */
+.title .w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.14em 0.02em 0.06em; margin: -0.14em -0.02em -0.06em; }
+.title .wi { display: inline-block; will-change: transform; }
+
+/* ---------- footer: GIỚI HẠN + NGUỒN ---------- */
+.foot {
+  position: absolute !important;
+  left: var(--pad-l);
+  right: var(--pad-r);
+  bottom: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font: 400 13px/1.5 var(--f-mono);
+  color: var(--muted);
+  z-index: 3;
+}
+.foot .limit { border-left: 2px solid var(--red); padding-left: 12px; color: var(--ink-2); }
+.foot .limit::before { content: 'GIỚI HẠN · '; color: var(--red); letter-spacing: 0.12em; }
+.foot .src::before { content: 'NGUỒN · '; color: var(--dim); letter-spacing: 0.12em; }
+
+.pg { font: 500 0.78em var(--f-mono); color: var(--muted); white-space: nowrap; }
+
+/* Adaptive stage (stage.js sets --ex / --ey): share the extra space between margins and content. */
+#stage {
+  --pad-l: calc(96px + var(--ex, 0px) * 0.35);
+  --pad-r: calc(128px + var(--ex, 0px) * 0.35);
+  --pad-t: calc(118px + var(--ey, 0px) * 0.4);
+}

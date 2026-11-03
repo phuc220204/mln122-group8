@@ -1,0 +1,38 @@
+:root {
+  /* surfaces */
+  --bg: #0a0b0d;
+  --bg-2: #111317;
+  --bg-3: #171a1f;
+  --panel: rgba(18, 20, 24, 0.74);
+  --panel-solid: #14161a;
+  --line: rgba(236, 230, 218, 0.1);
+  --line-2: rgba(236, 230, 218, 0.18);
+
+  /* ink */
+  --ink: #ece6da;
+  --ink-2: #c9c2b5;
+  --muted: #8b8780;
+  --dim: #5b5853;
+
+  /* semantic accents */
+  --gold: #e9b44c;   /* tích cực · thống nhất · giải pháp */
+  --gold-2: #f4cf7f;
+  --gold-soft: rgba(233, 180, 76, 0.14);
+  --red: #e5383b;    /* mâu thuẫn · rủi ro · cảnh báo */
+  --red-2: #ff6b5e;
+  --red-soft: rgba(229, 56, 59, 0.14);
+  --blue: #7fb3c8;   /* dữ liệu · pháp lý · trung tính */
+  --blue-soft: rgba(127, 179, 200, 0.13);
+
+  /* type */
+  --f-display: 'Oswald', 'Arial Narrow', sans-serif;
+  --f-serif: 'Playfair Display', Georgia, serif;
+  --f-sans: 'Be Vietnam Pro', system-ui, sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* stage grid */
+  --pad-l: 96px;
+  --pad-r: 128px;
+  --pad-t: 118px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}

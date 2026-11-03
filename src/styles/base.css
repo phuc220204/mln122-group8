@@ -1,0 +1,63 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-sans);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+}
+p, h1, h2, h3, h4, blockquote, figure, ul, ol { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+#bg3d {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 0;
+  transition: opacity 0.6s;
+}
+
+/* Stage: 1920×1080 design grid; stage.js stretches the long side to the viewport aspect */
+#stage-wrap { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+#stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 50% 50%;
+  pointer-events: auto;
+  overflow: hidden;
+}
+#stage::after {
+  /* film grain over everything on stage */
+  content: '';
+  position: absolute;
+  inset: -50%;
+  pointer-events: none;
+  opacity: 0.07;
+  filter: url(#grain);
+  background: #fff;
+  mix-blend-mode: overlay;
+  z-index: 50;
+}
+
+.mono { font-family: var(--f-mono); font-feature-settings: 'zero' 0; }
+.serif { font-family: var(--f-serif); }
+body { font-variant-numeric: lining-nums; }
+
+#gl { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; z-index: 5; pointer-events: none; }
+
+body.blackout #stage, body.blackout #bg3d, body.blackout #gl, body.blackout #ui > *:not(.blackout-veil) { visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

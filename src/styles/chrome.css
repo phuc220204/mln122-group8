@@ -1,0 +1,132 @@
+/* ---------- on-stage chrome (scales with stage) ---------- */
+.chrome { position: absolute; inset: 0; pointer-events: none; z-index: 40; }
+.topbar {
+  position: absolute;
+  left: var(--pad-l);
+  right: 56px;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: 500 14px/1 var(--f-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.topbar .brand { display: flex; align-items: center; gap: 12px; color: var(--ink-2); }
+.topbar .brand i { width: 10px; height: 10px; background: var(--red); display: inline-block; }
+.topbar .right { display: flex; align-items: center; gap: 22px; }
+.topbar .sec { color: var(--ink-2); }
+.topbar .cnt { color: var(--gold); }
+.topbar .clock { color: var(--blue); display: none; }
+.topbar .clock.on { display: inline; }
+
+.dots {
+  position: absolute;
+  right: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  pointer-events: auto;
+}
+.dots button {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(236, 230, 218, 0.35);
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+.dots button:hover { border-color: var(--gold); transform: scale(1.3); }
+.dots button.done { background: rgba(236, 230, 218, 0.25); border-color: transparent; }
+.dots button.on { background: var(--red); border-color: var(--red); box-shadow: 0 0 12px rgba(229, 56, 59, 0.8); }
+.dots button .tip {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font: 500 13px/1 var(--f-mono);
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  background: rgba(10, 11, 13, 0.92);
+  border: 1px solid var(--line);
+  padding: 7px 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.dots button:hover .tip { opacity: 1; }
+
+.progress { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: rgba(236, 230, 218, 0.06); }
+.progress i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--gold), var(--red)); transition: width 0.6s var(--ease); }
+.steps-hint {
+  position: absolute;
+  left: var(--pad-l);
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.steps-hint.on { opacity: 1; }
+.steps-hint .sh-t { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dim); }
+.steps-hint .sh-d { display: flex; gap: 5px; }
+.steps-hint i { width: 16px; height: 3px; background: rgba(236, 230, 218, 0.2); }
+.steps-hint i.on { background: var(--gold); }
+
+/* ---------- viewport-level UI ---------- */
+#ui { position: fixed; inset: 0; z-index: 10; pointer-events: none; }
+#ui > * { pointer-events: auto; }
+
+.overview {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 9, 11, 0.96);
+  backdrop-filter: blur(8px);
+  display: none;
+  padding: 48px 56px;
+  overflow: auto;
+}
+.overview.open { display: block; }
+.overview h3 { font: 500 14px/1 var(--f-mono); letter-spacing: 0.2em; color: var(--muted); margin-bottom: 28px; text-transform: uppercase; }
+.overview h3 b { color: var(--gold); }
+.overview .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+.overview .cell { text-align: left; }
+.overview .thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  transition: border-color 0.2s, transform 0.3s var(--ease);
+}
+.overview .cell:hover .thumb { border-color: var(--gold); transform: translateY(-3px); }
+.overview .cell.on .thumb { border-color: var(--red); }
+.overview .thumb .mini { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; pointer-events: none; }
+.overview .thumb .mini .slide { visibility: visible; opacity: 1; }
+.overview .thumb .mini [data-a], .overview .thumb .mini [data-step], .overview .thumb .mini .wi { visibility: visible !important; opacity: 1 !important; transform: none !important; }
+.overview .cap { margin-top: 10px; font: 500 13px/1.4 var(--f-mono); color: var(--ink-2); letter-spacing: 0.04em; }
+.overview .cap span { color: var(--red); margin-right: 8px; }
+
+.help-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  font: 500 13px/1 var(--f-mono);
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  background: rgba(12, 13, 16, 0.9);
+  border: 1px solid var(--line);
+  padding: 12px 18px;
+  border-radius: 999px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+.help-toast.on { opacity: 1; }
+.help-toast b { color: var(--gold); font-weight: 600; }

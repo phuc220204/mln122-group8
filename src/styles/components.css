@@ -1,0 +1,161 @@
+/* ---------- cards ---------- */
+.card {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 26px 28px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color 0.4s var(--ease), background 0.4s var(--ease), translate 0.5s var(--ease);
+}
+.card.pos { border-top: 2px solid var(--gold); }
+.card.neg { border-top: 2px solid var(--red); }
+.card.data { border-top: 2px solid var(--blue); }
+.card .lbl {
+  font: 600 13px/1 var(--f-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.card.pos .lbl { color: var(--gold); }
+.card.neg .lbl { color: var(--red); }
+.card.data .lbl { color: var(--blue); }
+.hoverable:hover { border-color: var(--line-2); background: rgba(26, 29, 34, 0.86); }
+
+.num-tag {
+  font: 700 14px/1 var(--f-mono);
+  color: var(--red);
+  letter-spacing: 0.1em;
+}
+
+/* ---------- bands (dải đỏ / dải vàng) ---------- */
+.band {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 24px;
+  font: 400 21px/1.4 var(--f-sans);
+  border-left: 3px solid currentColor;
+  border-radius: 2px;
+}
+.band .bico { flex: none; width: 26px; height: 26px; }
+.band.neg { color: var(--red-2); background: linear-gradient(90deg, rgba(229, 56, 59, 0.2), rgba(229, 56, 59, 0.04)); }
+.band.pos { color: var(--gold); background: linear-gradient(90deg, rgba(233, 180, 76, 0.18), rgba(233, 180, 76, 0.03)); }
+.band.data { color: var(--blue); background: linear-gradient(90deg, rgba(127, 179, 200, 0.16), rgba(127, 179, 200, 0.03)); }
+.band .bt { color: var(--ink); }
+.band .bt b { color: inherit; }
+.band.neg .bt b { color: var(--red-2); }
+.band.pos .bt b { color: var(--gold); }
+
+/* ---------- chips ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  font: 500 14px/1.2 var(--f-mono);
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.chip.pos { border-color: rgba(233, 180, 76, 0.5); color: var(--gold); background: var(--gold-soft); }
+.chip.neg { border-color: rgba(229, 56, 59, 0.5); color: var(--red-2); background: var(--red-soft); }
+.chip.data { border-color: rgba(127, 179, 200, 0.45); color: var(--blue); background: var(--blue-soft); }
+
+/* ---------- big metrics ---------- */
+.metric .mv {
+  font: 600 150px/0.9 var(--f-display);
+  letter-spacing: -0.02em;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.metric .mu { font: 500 44px/1 var(--f-display); color: var(--gold-2); margin-left: 10px; }
+.metric .mc { margin-top: 12px; font: 400 18px/1.45 var(--f-sans); color: var(--ink-2); max-width: 520px; }
+
+/* ---------- quotes ---------- */
+.quote {
+  position: relative;
+  font-variant-numeric: lining-nums;
+  font: italic 400 36px/1.32 var(--f-serif);
+  color: var(--ink);
+  padding-left: 54px;
+}
+.quote::before {
+  content: '“';
+  position: absolute;
+  left: -4px;
+  top: -28px;
+  font: 700 120px/1 var(--f-serif);
+  color: var(--gold);
+  opacity: 0.85;
+}
+.quote cite {
+  display: block;
+  margin-top: 14px;
+  font: 500 15px/1 var(--f-mono);
+  font-style: normal;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+}
+
+/* ---------- photos (duotone + vignette) ---------- */
+.photo { position: absolute; overflow: hidden; background: #15130f; }
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.18) brightness(0.62) sepia(0.25);
+  transform: scale(1.06);
+  will-change: transform;
+}
+.photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(233, 180, 76, 0.28), rgba(10, 11, 13, 0.2) 55%, rgba(229, 56, 59, 0.18)),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(10, 11, 13, 0.85) 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.photo.cold::after {
+  background:
+    linear-gradient(135deg, rgba(127, 179, 200, 0.3), rgba(10, 11, 13, 0.2) 60%),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(10, 11, 13, 0.85) 100%);
+}
+.photo.broken img { display: none; }
+.photo.broken {
+  background:
+    repeating-linear-gradient(45deg, rgba(233, 180, 76, 0.06) 0 2px, transparent 2px 14px),
+    radial-gradient(circle at 30% 40%, #2a2418, #0f1012 70%);
+}
+.photo .credit {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  z-index: 2;
+  font: 400 10px/1 var(--f-mono);
+  color: rgba(236, 230, 218, 0.45);
+}
+
+/* ---------- section labels ---------- */
+.h-lbl {
+  font: 600 14px/1 var(--f-mono);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.lead { font: 300 24px/1.5 var(--f-sans); color: var(--ink-2); }
+.small { font: 400 16px/1.5 var(--f-sans); color: var(--muted); }
+
+/* ---------- icon ---------- */
+.ico { width: 30px; height: 30px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- connectors ---------- */
+svg.wire { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; z-index: 1; }
+svg.wire path { fill: none; stroke-width: 1.5; }
+
+/* ---------- step fragments ---------- */
+[data-step] { opacity: 0.12; filter: blur(3px); }

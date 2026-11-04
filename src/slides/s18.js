@@ -1,5 +1,4 @@
 import { kicker, title } from './_kit.js';
-import { icon } from '../components/icons.js';
 
 const cards = [
   ['Thống nhất và mâu thuẫn cùng tồn tại:', 'bỏ khoán làm cả hai mặt lộ rõ.'],
@@ -20,10 +19,6 @@ export default {
         <span class="cc-n mono">0${i + 1}</span>
         <p><b>${h}</b> ${t}</p>
       </article>`).join('')}
-  </div>
-  <div class="ask" data-a>
-    <span class="ask-l mono">Câu hỏi gợi mở cho phần phản biện</span>
-    <p class="ask-q">${icon('ring', 'ask-i pos-t')}<em>Ngưỡng 1 tỷ là <span class="pos-t">"phao cứu sinh"</span> hay <span class="neg-t">"trần kính"</span>?</em>${icon('ceiling', 'ask-i neg-t')}</p>
   </div>
   <p class="thanks" data-a="scale">Cảm ơn thầy/cô và các bạn đã lắng nghe!</p>`,
 };

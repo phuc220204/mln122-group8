@@ -191,6 +191,10 @@ export class ParticleScene {
   }
 
   setState(s) {
+    if (s.hidden) {
+      gsap.to(this.uniforms.uOpacity, { value: 0, duration: reduced ? 0.01 : 0.6, ease: 'power2.out', overwrite: true });
+      return;
+    }
     const d = reduced ? 0.01 : 2.2;
     this.morphTo(s.shape);
     gsap.to(this.pivot.position, { x: s.pos[0], y: s.pos[1], z: s.pos[2], duration: d, ease: 'power3.inOut', overwrite: true });
@@ -223,6 +227,7 @@ export class ParticleScene {
       }
     } else u.uMouse.value.set(999, 999, 0);
 
+    this.points.visible = u.uOpacity.value > 0.001;
     this.renderer.render(this.scene, this.camera);
     requestAnimationFrame(this.loop);
   }

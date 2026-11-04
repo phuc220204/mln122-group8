@@ -35,11 +35,20 @@ export default {
       <header class="h-lbl" data-a="fade"><b class="neg">⚠ HẠN CHẾ</b> (nhận định của nhóm)</header>
       <ul>${warn.map((t) => `<li data-a data-gap="0.08">${t}</li>`).join('')}</ul>
     </section>
+    <div class="gl s13-tower" data-gl="tower" role="img" aria-label="Khối 3D: tháp tờ khai rất cao đứng trên chân đế hẹp màu đỏ, chao đảo"></div>
   </div>
   ${foot({
     limit: 'Số 224.700 tỷ gộp cả thương mại điện tử, nên chưa tách được phần tăng do bỏ khoán.',
     src: 'Tạp chí Kinh tế – Tài chính, 2026a, 2026b; Mekong ASEAN, 2026',
   })}`,
+  // hovering the results steadies the tower; the limitations (and the resting state) set it swaying
+  mount(el) {
+    const send = (mode) => window.dispatchEvent(new CustomEvent('gl:mode', { detail: { key: 'tower', mode } }));
+    el.querySelector('.ledger.pos').addEventListener('mouseenter', () => send('pos'));
+    el.querySelector('.ledger.neg').addEventListener('mouseenter', () => send('neg'));
+    el.querySelectorAll('.ledger').forEach((c) => c.addEventListener('mouseleave', () => send('neg')));
+  },
+
   enter(el, tl) {
     el.querySelectorAll('.r-fg').forEach((c) => {
       const len = 2 * Math.PI * 52;

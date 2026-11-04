@@ -320,6 +320,64 @@ function powerShells() {
   return s;
 }
 
+/*
+ * 13 · Số lượng >< độ ổn định: filings pile up fast into a tall stack (số lượng), but it stands on
+ * a narrow red foot (độ ổn định) and sways, more the higher up you go.
+ */
+function tower() {
+  const s = base({ fov: 30, pos: [0, 2.6, 11], look: [0, 1.9, 0] });
+  const R = s.root;
+  const shadow = new THREE.Mesh(new THREE.CircleGeometry(1.5, 48), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.3 }));
+  shadow.rotation.x = -Math.PI / 2;
+  R.add(shadow);
+  const footMat = new THREE.MeshStandardMaterial({ color: C.red, roughness: 0.5, emissive: C.red, emissiveIntensity: 0.25 });
+  const footGeo = new THREE.CylinderGeometry(0.2, 0.42, 0.55, 32);
+  const foot = solid(footGeo, footMat, C.bg, 0.5);
+  foot.position.y = 0.275;
+  R.add(foot);
+
+  const n = 14;
+  const slabGeo = new THREE.BoxGeometry(1.6, 0.22, 1.1);
+  const slabs = Array.from({ length: n }, (_, i) => {
+    const m = solid(slabGeo, i % 2 ? M.paper : M.gold, C.bg, 0.5);
+    m.rotation.y = rnd(-0.12, 0.12);
+    m.userData = { y: 0.66 + i * 0.24, ox: rnd(-0.05, 0.05), drop: 0 };
+    R.add(m);
+    return m;
+  });
+  const lTop = label('SỐ LƯỢNG', { size: 36, color: '#e9b44c', scale: 0.0062 });
+  const lFoot = label('ĐỘ ỔN ĐỊNH', { size: 36, color: '#e5383b', scale: 0.0062 });
+  lFoot.position.set(0, -0.4, 0.6);
+  R.add(lTop, lFoot);
+
+  const st = { w: 0 };
+  s.setMode = (mode) => gsap.to(st, { w: mode === 'neg' ? 1 : 0.08, duration: 0.8, ease: 'power2.inOut', overwrite: true });
+  s.enter = () => {
+    gsap.killTweensOf(st);
+    st.w = 0;
+    slabs.forEach((m, i) => {
+      gsap.killTweensOf(m.userData);
+      gsap.fromTo(m.userData, { drop: 6 }, { drop: 0, duration: 0.8, delay: 0.1 + i * 0.07, ease: 'bounce.out' });
+    });
+    gsap.to(st, { w: 1, duration: 1.4, ease: 'power2.inOut', delay: 2 });
+  };
+  s.update = (t) => {
+    const sway = (Math.sin(t * 1.5) * 0.5 + Math.sin(t * 2.7 + 1) * 0.12) * st.w;
+    slabs.forEach((m, i) => {
+      const k = Math.pow((i + 1) / n, 1.6);
+      m.position.set(m.userData.ox + sway * 0.7 * k, m.userData.y + m.userData.drop, 0);
+      m.rotation.z = -sway * 0.16 * k;
+    });
+    const top = slabs[n - 1];
+    lTop.position.set(top.position.x, top.position.y + 0.5, 0);
+    lTop.material.opacity = Math.max(0, 1 - top.userData.drop);
+    foot.rotation.z = -sway * 0.05;
+    footMat.emissiveIntensity = 0.25 + 0.25 * st.w * (0.5 + 0.5 * Math.sin(t * 4));
+    R.rotation.y = Math.sin(t * 0.3) * 0.25;
+  };
+  return s;
+}
+
 /* 12 · Ngưỡng (Slide_V1 towers): the 500 triệu threshold of NĐ 68 and the 1 tỷ threshold of NĐ 141 rise up. */
 function towers() {
   const s = base({ fov: 32, pos: [0, 5.2, 13.5], look: [0, 2.1, 0], fog: false });
@@ -367,4 +425,4 @@ function towers() {
   return s;
 }
 
-export const BUILDERS = { coins, scale, receipt, towers, powerShells, globe: buildGlobe };
+export const BUILDERS = { coins, scale, receipt, towers, powerShells, tower, globe: buildGlobe };

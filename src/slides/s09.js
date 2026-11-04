@@ -19,7 +19,7 @@ export default {
   html: `
   <div class="gl s09-globe" data-gl="globe" role="img" aria-label="Địa cầu 3D: Việt Nam, gồm quần đảo Hoàng Sa và Trường Sa, sáng dần"></div>
   ${kicker('09', 'Bối cảnh chính sách')}
-  ${title('Từ "ấn định" sang <em class="pos">"tự khai"</em> – trong 16 tháng')}
+  ${title('Từ <em class="pos">"khoán"</em> sang <em class="pos">"tự khai"</em> – trong 16 tháng')}
   <div class="s09-top">
     <div class="metric s09-metric" data-a="left">
       <div><span class="mv" data-count="3534814" data-dur="2.4">3.534.814</span></div>

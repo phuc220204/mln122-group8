@@ -1,5 +1,4 @@
 import { kicker } from './_kit.js';
-import { credits } from '../content/credits.js';
 
 const groups = [
   ['Giáo trình, kinh điển, văn kiện', [
@@ -40,8 +39,6 @@ const item = (it) => {
   return `<li><span class="rf-n mono">${n}.</span><p>${text}${url ? ` <a href="${url}" target="_blank" rel="noopener">${url}</a>` : ''}</p></li>`;
 };
 
-const creditLine = (c) => `${c.used} – ${c.title} – ${c.author} – ${c.license}${c.url ? ` · <a href="${c.url}" target="_blank" rel="noopener">${c.url}</a>` : ''}`;
-
 export default {
   title: 'Tài liệu tham khảo · APA 7',
   section: 'Tài liệu tham khảo',
@@ -50,9 +47,8 @@ export default {
   cls: 'veil-heavy',
   html: `
   ${kicker('19', 'Tài liệu tham khảo · APA 7')}
-  <p class="rf-note" data-a>Nguồn chính thống gồm giáo trình, văn kiện Đảng, văn bản pháp luật, cơ quan nhà nước và báo chí thuộc cơ quan nhà nước. Các nhận định "phân tích của nhóm" được ghi rõ trên từng slide. Ảnh nền: tên ảnh – tác giả – giấy phép được ghi ở mục <b class="pos">Nguồn ảnh</b> cuối danh mục.</p>
+  <p class="rf-note" data-a>Nguồn chính thống gồm giáo trình, văn kiện Đảng, văn bản pháp luật, cơ quan nhà nước và báo chí thuộc cơ quan nhà nước. Các nhận định "phân tích của nhóm" được ghi rõ trên từng slide.</p>
   <div class="refs" data-scroll data-a="fade">
     ${groups.map(([h, items]) => `<section><h3 class="h-lbl pos-t">${h}</h3><ol>${items.map(item).join('')}</ol></section>`).join('')}
-    <section class="rf-img"><h3 class="h-lbl pos-t">Nguồn ảnh</h3><ul>${credits.map((c) => `<li><p>${creditLine(c)}</p></li>`).join('')}</ul></section>
   </div>`,
 };

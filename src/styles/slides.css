@@ -477,7 +477,6 @@
 .refs section:nth-child(3) ol { display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; }
 .refs h3 { margin-bottom: 12px; }
 .refs li { display: grid; grid-template-columns: 34px 1fr; gap: 8px; padding: 9px 0; border-bottom: 1px solid var(--line); break-inside: avoid; }
-.refs .rf-img li { grid-template-columns: 1fr; }
 .rf-n { font-size: 14px; color: var(--muted); }
 .refs p { font: 400 16px/1.5 var(--f-sans); color: var(--ink-2); }
 .refs p i { color: var(--ink); }

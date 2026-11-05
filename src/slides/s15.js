@@ -6,7 +6,7 @@ const sols = [
   ['eye', '<b class="pos">Chọn hộ kiểm tra bằng tiêu chí rủi ro tự động</b>, công khai bộ tiêu chí; cán bộ không tự chọn hộ', 'Lớp B: khâu ấn định sau kê khai', 'Kiểm soát (5.3.2.3)'],
   ['receipt', '<b class="pos">Phần mềm hóa đơn, sổ sách miễn phí</b> trên nền tảng nhà nước; tập huấn tại chợ, tại phường', 'Năng lực số, chi phí tuân thủ', 'Tạo môi trường (5.3.2.1)'],
   ['layers', '<b class="pos">Làm "thoải" vách đá:</b> khi vượt 1 tỷ, thuế GTGT tăng dần theo phần vượt thay vì tính trên toàn bộ doanh thu', '"Vách đá" 1 tỷ', 'Điều hòa (5.3.2.2)'],
-  ['shield', '<b class="pos">Ổn định ngưỡng tối thiểu 3 năm</b>; công bố trước công thức điều chỉnh', 'Ngưỡng đổi sau 55 ngày', 'Giải quyết mâu thuẫn (5.3.2.4)'],
+  ['shield', '<b class="pos">Ổn định ngưỡng tối thiểu 3 năm</b>, trừ điều chỉnh có lợi cho hộ; công bố trước công thức điều chỉnh', 'Ngưỡng đổi sau 55 ngày', 'Giải quyết mâu thuẫn (5.3.2.4)'],
 ];
 
 export default {
@@ -30,5 +30,6 @@ export default {
       </article>`).join('')}
   </div>
   <p class="sol-note" data-a>Giải pháp "công khai quy trình, giám sát cán bộ" được gộp vào giải pháp 2, vì tiêu chí chọn hộ công khai chính là cách giám sát cán bộ.</p>
-  ${foot({ src: 'Bộ GD&ĐT, 2019, Ch.5 mục 5.3.2 · đề xuất của nhóm' })}`,
+  <p class="sol-note sol-impl" data-a><b>Giải pháp 4:</b> Bộ Tài chính đề xuất, Quốc hội sửa Luật Thuế GTGT 48/2024 (Điều 12), Chính phủ sửa NĐ 68 (Điều 3); cần giới hạn dải chuyển tiếp để không tạo chênh lệch mới với doanh nghiệp nhỏ. <b>Ý "khoán lại cho hộ dưới 5 tỷ":</b> phải sửa Luật Quản lý thuế 108/2025 và mở lại chênh lệch với doanh nghiệp nhỏ.</p>
+  ${foot({ src: 'Bộ GD&ĐT, 2019, Ch.5 mục 5.3.2; Quốc hội, 2024, 2025b; Chính phủ, 2026a · đề xuất của nhóm' })}`,
 };

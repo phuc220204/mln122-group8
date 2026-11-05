@@ -9,8 +9,10 @@ const groups = [
     'Bộ Chính trị. (2025). <i>Nghị quyết số 68-NQ/TW ngày 04/5/2025 về phát triển kinh tế tư nhân</i>.',
   ]],
   ['Văn bản pháp luật', [
+    'Quốc hội. (2024). <i>Luật Thuế giá trị gia tăng số 48/2024/QH15 ngày 26/11/2024</i>.',
     'Quốc hội. (2025a). <i>Nghị quyết số 198/2025/QH15 ngày 17/5/2025 về một số cơ chế, chính sách đặc biệt phát triển kinh tế tư nhân</i>.',
     'Quốc hội. (2025b). <i>Luật Quản lý thuế số 108/2025/QH15 ngày 10/12/2025</i>.',
+    'Quốc hội. (2025c). <i>Luật Thuế thu nhập cá nhân số 109/2025/QH15 ngày 10/12/2025</i>.',
     'Quốc hội. (2026a). <i>Luật sửa đổi, bổ sung một số điều của Luật Thuế thu nhập cá nhân, Luật Thuế giá trị gia tăng, Luật Thuế thu nhập doanh nghiệp và Luật Thuế tiêu thụ đặc biệt</i> (thông qua ngày 24/4/2026).',
     'Quốc hội. (2026b). <i>Nghị quyết số 43/2026/QH16 về giảm thuế thu nhập cá nhân, thuế thu nhập doanh nghiệp đối với cá nhân và doanh nghiệp</i> (thông qua ngày 24/8/2026).',
     'Chính phủ. (2026a). <i>Nghị định số 68/2026/NĐ-CP ngày 05/3/2026 quy định về chính sách thuế và quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh</i>.',
@@ -27,7 +29,7 @@ const groups = [
     ['Báo Đấu thầu. (2026, 03/8). <i>Phác họa bức tranh khu vực kinh tế chưa được quan sát</i> (số liệu Cục Thống kê).', 'https://baodauthau.vn/phac-hoa-buc-tranh-khu-vuc-kinh-te-chua-duoc-quan-sat-post204108.html'],
     ['Luật sư Việt Nam. (2026, 09/9). <i>Những thay đổi quan trọng về thuế hộ, cá nhân kinh doanh cần biết</i> (theo Công văn 6436/CT-PC của Cục Thuế).', 'https://lsvn.vn/nhung-thay-doi-quan-trong-ve-thue-ho-ca-nhan-kinh-doanh-can-biet-a178824.html'],
     ['Mekong ASEAN. (2026). <i>Thu gần 224.700 tỷ đồng từ thương mại điện tử và hộ kinh doanh trong 9 tháng</i>.', 'https://mekongasean.vn/thu-gan-224700-ty-dong-tu-thuong-mai-dien-tu-va-ho-kinh-doanh-trong-9-thang-60375.html'],
-    ['VietnamPlus. (2025). <i>Bỏ áp dụng thuế khoán: Hộ kinh doanh bước vào cuộc chơi mới</i>.', 'https://www.vietnamplus.vn/bo-ap-dung-thue-khoan-ho-kinh-doanh-buoc-vao-cuoc-choi-moi-post1042297.vnp'],
+    ['VietnamPlus. (2025, 04/6). <i>Bỏ áp dụng thuế khoán: Hộ kinh doanh bước vào cuộc chơi mới</i>.', 'https://www.vietnamplus.vn/bo-ap-dung-thue-khoan-ho-kinh-doanh-buoc-vao-cuoc-choi-moi-post1042297.vnp'],
     ['Vietnamnet. (2020, 26/02). <i>Ép dân chi "bồi dưỡng" hàng trăm triệu, cựu cán bộ thuế lĩnh án</i>.', 'https://vietnamnet.vn/ep-dan-chi-boi-duong-hang-tram-trieu-cuu-can-bo-thue-lanh-an-619377.html'],
   ]],
 ];

@@ -2,11 +2,11 @@ import { kicker, title, foot } from './_kit.js';
 import { icon } from '../components/icons.js';
 
 const sols = [
-  ['link', '<b class="pos">Liên thông dữ liệu</b> thuế – ngân hàng – sàn – định danh; đối soát tự động để phát hiện chia, tách', 'Khâu 1, 2 (Slide 11)', 'Kiểm soát (5.3.2.3)'],
-  ['receipt', '<b class="pos">Phần mềm hóa đơn, sổ sách miễn phí</b> trên nền tảng nhà nước; tập huấn tại chợ, tại phường', 'Năng lực số; khâu 3', 'Tạo môi trường (5.3.2.1)'],
-  ['eye', '<b class="pos">Công khai quy trình, giám sát cán bộ:</b> xử lý trực tuyến, kênh phản ánh, luân chuyển', '"Xin – cho"', 'Kiểm soát (5.3.2.3)'],
-  ['layers', '<b class="pos">Lộ trình hộ → doanh nghiệp:</b> ưu đãi giảm dần thay vì "vách đá"', '"Trần kính"', 'Điều hòa (5.3.2.2)'],
-  ['shield', '<b class="pos">Ổn định ngưỡng tối thiểu 3 năm</b>; công bố trước công thức điều chỉnh', 'Ngưỡng đổi nhanh', 'Giải quyết mâu thuẫn (5.3.2.4)'],
+  ['link', '<b class="pos">Liên thông dữ liệu</b> thuế – ngân hàng – sàn – định danh; đối soát tự động để phát hiện chia, tách', 'Lớp A', 'Kiểm soát (5.3.2.3)'],
+  ['eye', '<b class="pos">Chọn hộ kiểm tra bằng tiêu chí rủi ro tự động</b>, công khai bộ tiêu chí; cán bộ không tự chọn hộ', 'Lớp B: khâu ấn định sau kê khai', 'Kiểm soát (5.3.2.3)'],
+  ['receipt', '<b class="pos">Phần mềm hóa đơn, sổ sách miễn phí</b> trên nền tảng nhà nước; tập huấn tại chợ, tại phường', 'Năng lực số, chi phí tuân thủ', 'Tạo môi trường (5.3.2.1)'],
+  ['layers', '<b class="pos">Làm "thoải" vách đá:</b> khi vượt 1 tỷ, thuế GTGT tăng dần theo phần vượt thay vì tính trên toàn bộ doanh thu', '"Vách đá" 1 tỷ', 'Điều hòa (5.3.2.2)'],
+  ['shield', '<b class="pos">Ổn định ngưỡng tối thiểu 3 năm</b>; công bố trước công thức điều chỉnh', 'Ngưỡng đổi sau 55 ngày', 'Giải quyết mâu thuẫn (5.3.2.4)'],
 ];
 
 export default {
@@ -29,5 +29,6 @@ export default {
         <div class="sol-role mono">${r}</div>
       </article>`).join('')}
   </div>
+  <p class="sol-note" data-a>Giải pháp "công khai quy trình, giám sát cán bộ" được gộp vào giải pháp 2, vì tiêu chí chọn hộ công khai chính là cách giám sát cán bộ.</p>
   ${foot({ src: 'Bộ GD&ĐT, 2019, Ch.5 mục 5.3.2 · đề xuất của nhóm' })}`,
 };

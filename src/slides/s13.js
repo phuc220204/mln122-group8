@@ -8,7 +8,7 @@ const ok = [
 ];
 const warn = [
   'Ngưỡng đổi chỉ sau <b class="neg">55 ngày</b> (05/3 → 29/4) → hộ phải xử lý lại kê khai quý I<div class="days"><span class="mono">05/3</span><i><b></b></i><span class="mono">29/4</span></div>',
-  'Ngưỡng cố định tạo "vách đá" → động cơ chia, tách doanh thu',
+  '"Vách đá" thuế GTGT ở mốc 1 tỷ → động cơ khai dưới ngưỡng, chia, tách doanh thu',
   'Tiểu thương lớn tuổi chưa theo kịp công nghệ',
   'Đã có đề xuất nghiên cứu áp dụng lại khoán cho hộ dưới 5 tỷ → mâu thuẫn chưa khép',
 ];
@@ -24,7 +24,7 @@ export default {
   scene: 'results',
   html: `
   ${kicker('13', 'Đánh giá hiệu quả')}
-  ${title('Thắng về <em class="pos">số lượng</em> – nợ về <em class="neg">độ ổn định</em>')}
+  ${title('Thắng về <em class="pos">minh bạch</em> – chưa đủ dữ liệu để nói <em class="neg">"lớn hơn"</em>')}
   <div class="s13-grid">
     <div class="rings">${ring(98.2, 'tờ khai đúng hạn')}${ring(99.6, 'nộp điện tử')}</div>
     <section class="ledger pos">
@@ -37,8 +37,14 @@ export default {
     </section>
     <div class="gl s13-tower" data-gl="tower" role="img" aria-label="Khối 3D: tháp tờ khai rất cao đứng trên chân đế hẹp màu đỏ, chao đảo"></div>
   </div>
+  <div class="s13-check" data-a>
+    <span class="h-lbl">Đối chiếu 3 thước đo</span>
+    <p><b class="pos">Minh bạch hơn</b> → có số liệu chứng minh</p>
+    <p><b class="neg">Lớn hơn</b> → chưa đủ dữ liệu</p>
+    <p><b class="neg">Hài hòa hơn</b> → chưa có dữ liệu chính thức</p>
+  </div>
   ${foot({
-    limit: 'Số 224.700 tỷ gộp cả thương mại điện tử, nên chưa tách được phần tăng do bỏ khoán.',
+    limit: 'Số 224.700 tỷ gộp cả thương mại điện tử, nên chưa tách được phần tăng do bỏ khoán. Nhóm <b>chưa tìm được số liệu chính thức</b> về chi phí tuân thủ (thời gian, tiền thuê kế toán, phần mềm) của hộ, nên chưa kết luận hộ nhỏ "được" hay "mất".',
     src: 'Tạp chí Kinh tế – Tài chính, 2026a, 2026b; Mekong ASEAN, 2026',
   })}`,
   // hovering the results steadies the tower; the limitations (and the resting state) set it swaying

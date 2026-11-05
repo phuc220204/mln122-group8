@@ -321,8 +321,8 @@ function powerShells() {
 }
 
 /*
- * 13 · Số lượng >< độ ổn định: filings pile up fast into a tall stack (số lượng), but it stands on
- * a narrow red foot (độ ổn định) and sways, more the higher up you go.
+ * 13 · Minh bạch >< chưa đủ dữ liệu: filings pile up fast into a tall stack (minh bạch), but it stands
+ * on a narrow red foot (the data to say "lớn hơn" is missing) and sways, more the higher up you go.
  */
 function tower() {
   const s = base({ fov: 30, pos: [0, 2.6, 11], look: [0, 1.9, 0] });
@@ -345,8 +345,8 @@ function tower() {
     R.add(m);
     return m;
   });
-  const lTop = label('SỐ LƯỢNG', { size: 36, color: '#e9b44c', scale: 0.0062 });
-  const lFoot = label('ĐỘ ỔN ĐỊNH', { size: 36, color: '#e5383b', scale: 0.0062 });
+  const lTop = label('MINH BẠCH', { size: 36, color: '#e9b44c', scale: 0.0062 });
+  const lFoot = label('CHƯA ĐỦ DỮ LIỆU', { size: 32, color: '#e5383b', scale: 0.0062 });
   lFoot.position.set(0, -0.4, 0.6);
   R.add(lTop, lFoot);
 

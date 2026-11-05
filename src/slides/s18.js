@@ -2,7 +2,7 @@ import { kicker, title } from './_kit.js';
 
 const cards = [
   ['Thống nhất và mâu thuẫn cùng tồn tại:', 'bỏ khoán làm cả hai mặt lộ rõ.'],
-  ['Nhà nước điều hòa bằng 4 công cụ:', 'chính sách đúng hướng, cần ổn định hơn.'],
+  ['Nhà nước điều hòa bằng 4 công cụ:', 'chính sách đúng hướng; cần giữ ngưỡng ổn định và thu hẹp quyền tùy nghi ở khâu sau kê khai.'],
   ['Mỗi sinh viên là một chủ thể:', 'hài hòa lợi ích bắt đầu từ cá nhân.'],
 ];
 

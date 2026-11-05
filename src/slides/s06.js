@@ -29,6 +29,7 @@ export default {
         <p>Có <b class="neg">công chức, cơ quan công quyền</b> tham gia → quyền lực bị lạm dụng</p>
         <p class="hidden-hand"><span class="redact"><b class="neg">Thường không lộ diện</b></span> → chống "vô cùng khó khăn"</p>
       </section>
+      <p class="s06-note" data-a>Một cá nhân tự ý trốn thuế là <b class="neg">vi phạm cá nhân</b>, làm tổn hại lợi ích xã hội (tr.132), nhưng <b class="neg">chưa phải "lợi ích nhóm"</b>. Lợi ích nhóm đòi hỏi có <b class="pos">liên kết</b> giữa nhiều chủ thể (tr.132).</p>
     </div>
   </div>
   ${foot({ src: 'Bộ GD&ĐT, 2019, Ch.5 mục 5.3.1.2 (tr.128, 132–133); C.Mác & Ph.Ăngghen, 1995a, t.8, tr.28 (dẫn theo giáo trình tr.132)' })}`,

@@ -6,6 +6,12 @@ const rows = [
   ['<b class="pos">Minh bạch</b> là mẫu số chung để các lợi ích gặp nhau', 'Công khai, minh bạch mọi cơ chế, chính sách để chống lạm quyền (tr.136–137)'],
 ];
 
+const measures = [
+  ['Minh bạch hơn?', 'Tỷ lệ kê khai đúng hạn, số hộ dùng hóa đơn điện tử'],
+  ['Lớn hơn?', 'Số thu tăng thêm do bỏ khoán, số hộ chuyển lên doanh nghiệp'],
+  ['Hài hòa hơn?', 'Gánh nặng thuế và chi phí tuân thủ của hộ nhỏ có giảm hay tăng'],
+];
+
 export default {
   title: 'Quan điểm nhóm (1)',
   section: 'Phần 1.1 · Lý luận',
@@ -22,13 +28,13 @@ export default {
         <p class="th-b mono">${b}</p>
       </div>`).join('')}
   </div>
-  <div class="gauge" data-a>
-    <span class="g-arrow mono">→</span>
-    <p>Thước đo cho phần thực tiễn: bỏ khoán có làm "chiếc bánh" <b class="pos">lớn hơn</b> và <b class="pos">minh bạch hơn</b> không?</p>
-    <div class="g-bars"><div><span class="mono">LỚN HƠN</span><i></i></div><div><span class="mono">MINH BẠCH HƠN</span><i></i></div></div>
+  <p class="m3-h" data-a><span class="g-arrow mono">→</span> <b class="pos">3 thước đo</b> nhóm dùng cho phần thực tiễn:</p>
+  <div class="m3">
+    ${measures.map(([q, how]) => `
+      <article class="m3-c" data-a data-gap="0.1">
+        <h3>${q}</h3>
+        <p>${how}</p>
+      </article>`).join('')}
   </div>
   ${foot({ src: 'Bộ GD&ĐT, 2019, tr.135–137 · vận dụng của nhóm' })}`,
-  enter(el, tl) {
-    tl.fromTo(el.querySelectorAll('.g-bars i'), { scaleX: 0 }, { scaleX: 1, duration: 1.2, stagger: 0.2, ease: 'power2.out' }, 1.6);
-  },
 };

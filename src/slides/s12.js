@@ -46,7 +46,7 @@ export default {
   steps: 5,
   html: `
   ${kicker('12', 'Công cụ điều hòa')}
-  ${title('Đủ <em class="pos">4 công cụ</em> – đúng như giáo trình (tr.134)')}
+  ${title('Đủ <em class="pos">4 công cụ</em> (tr.134)')}
   <div class="bento">
     <section class="bt-cell law" data-step="1">
       <header>${icon('gavel')}<h3>PHÁP LUẬT</h3></header>

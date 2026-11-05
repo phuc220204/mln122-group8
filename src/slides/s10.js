@@ -3,7 +3,7 @@ import { icon } from '../components/icons.js';
 
 const rows = [
   ['<b>Nhà nước</b>', 'tr.50–51', 'building', 'Nguồn thu đủ, công bằng; dữ liệu minh bạch', 'Hộ lớn lên → nguồn thu bền vững', 'Chống thất thu ↔ hộ ngại chi phí tuân thủ, ngại bị "soi" dòng tiền'],
-  ['<b>Hộ kinh doanh</b>', 'người sản xuất, tr.48–49', 'cart', 'Lợi nhuận, chi phí thấp', '≤ 1 tỷ không phải nộp GTGT, TNCN; minh bạch → dễ vay vốn, dễ lên doanh nghiệp', 'Thuế bình quân <b class="neg">4,6 triệu (kê khai) so với 670.000 đồng/tháng (khoán)</b>; thêm sổ sách, hóa đơn'],
+  ['<b>Hộ kinh doanh</b>', 'người sản xuất, tr.48–49', 'cart', 'Lợi nhuận, chi phí thấp', '≤ 1 tỷ không phải nộp GTGT, TNCN; minh bạch → dễ vay vốn, dễ lên doanh nghiệp', 'Thuế bình quân <b class="neg">4,6 triệu đồng/tháng (kê khai) so với 670.000 đồng/tháng (khoán)</b>; thêm sổ sách, hóa đơn'],
   ['<b>Doanh nghiệp</b>', '', 'briefcase', 'Cạnh tranh bình đẳng', 'Doanh nghiệp ≤ 1 tỷ cũng miễn TNDN (NĐ 141, Điều 2)', 'Trước đây hộ khoán chịu gánh nặng thấp hơn'],
   ['<b>Người lao động tại hộ</b>', 'tr.129–130', 'users', 'Việc làm, tiền lương', 'Doanh thu minh bạch → cơ sở đòi hợp đồng, quyền lợi', 'Hộ cắt chi phí → giảm giờ, giảm người'],
   ['<b>Người tiêu dùng</b>', 'tr.49', 'receipt', 'Giá hợp lý, hàng thật, có hóa đơn', 'Truy xuất nguồn gốc, bảo vệ quyền lợi', 'Chi phí bị đẩy vào giá bán'],
@@ -34,9 +34,9 @@ export default {
       ${photo('street-vendor-hanoi.jpg', 'x7-photo', '', 'Ảnh: Jakub Hałun · CC BY 4.0')}
       <div class="x7-num"><span class="mono">≈</span><span data-count="7" data-at="0.9">7</span><small>×</small></div>
       <div class="x7-bars">
-        <div class="xb"><span class="mono">KHOÁN</span><i class="b1"></i><b class="mono">670.000</b></div>
-        <div class="xb"><span class="mono">KÊ KHAI</span><i class="b2"></i><b class="mono neg-t">4,6 triệu</b></div>
-        <p class="mono xb-u">đồng/tháng · bình quân · Cục Thuế, 3/2025</p>
+        <div class="xb"><span class="mono">KHOÁN</span><i class="b1"></i><b class="mono">670.000 đồng</b></div>
+        <div class="xb"><span class="mono">KÊ KHAI</span><i class="b2"></i><b class="mono neg-t">4,6 triệu đồng</b></div>
+        <p class="mono xb-u">mỗi tháng · bình quân · Cục Thuế, 3/2025</p>
       </div>
     </aside>
   </div>

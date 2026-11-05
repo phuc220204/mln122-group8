@@ -23,7 +23,7 @@ export default {
       <p class="db-c pos" data-a="left" data-gap="0.02">${a}</p>
       <p class="db-c neg" data-a="right" data-gap="0.14">${b}</p>`).join('')}
   </div>
-  <div class="band neg s14-cliff" data-a><span class="bt"><b>Ví dụ hộ bán hàng hóa:</b> doanh thu 1,0 tỷ → 0 đồng. Doanh thu 1,1 tỷ → GTGT 1% × 1,1 tỷ = 11 triệu, TNCN 0,5% × 100 triệu = 0,5 triệu. Thêm 100 triệu doanh thu, thêm <b>11,5 triệu</b> thuế.</span></div>
+  <div class="band neg s14-cliff" data-a><span class="bt"><b>Ví dụ hộ bán hàng hóa:</b> doanh thu 1,0 tỷ đồng → 0 đồng. Doanh thu 1,1 tỷ đồng → GTGT 1% × 1,1 tỷ = 11 triệu đồng, TNCN 0,5% × 100 triệu = 0,5 triệu đồng. Thêm 100 triệu đồng doanh thu, thêm <b>11,5 triệu đồng</b> thuế.</span></div>
   <div class="verdict" data-a>
     <span class="h-lbl">Theo 3 thước đo</span>
     <p><b class="pos">Minh bạch hơn:</b> đã đạt</p>

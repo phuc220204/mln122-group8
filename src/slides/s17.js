@@ -28,7 +28,7 @@ export default {
     </div>
   </div>
   <div class="band neg s17-band" data-a>${icon('link', 'bico')}<span class="bt">Tình huống 2 là <b>Lớp A</b> (vi phạm cá nhân). Nó thành <b>lợi ích nhóm tiêu cực</b> khi có người tiếp tay, ví dụ cán bộ làm ngơ hoặc người đứng ra dàn xếp cho nhiều shop (tr.132–133).</span></div>
-  <div class="band pos s17-ask" data-step="1">${icon('users', 'bico')}<span class="bt"><b>Câu hỏi cho cả lớp:</b> Ngưỡng 1 tỷ là "phao cứu sinh" hay "vách đá"? Giơ tay chọn.</span></div>
+  <div class="band pos s17-ask" data-step="1">${icon('users', 'bico')}<span class="bt"><b>Câu hỏi cho cả lớp:</b> Ngưỡng 1 tỷ là "phao cứu sinh" hay "vách đá"?</span></div>
   ${foot({ src: 'Chính phủ, 2026a, 2026b; Quốc hội, 2026b; Bộ GD&ĐT, 2019, tr.132–133' })}`,
   enter(el, tl) {
     tl.fromTo(el.querySelector('.rev-fill'), { scaleX: 0 }, { scaleX: 0.96, duration: 2.4, ease: 'power2.in' }, 1.2);

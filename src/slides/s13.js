@@ -3,7 +3,7 @@ import { kicker, title, foot } from './_kit.js';
 const ok = [
   '<b class="pos"><span data-count="1689266" data-at="1.2">1.689.266</span></b> tờ khai (1.602.118 chính thức + 87.148 bổ sung); thuế kê khai <b class="pos"><span data-count="9767.8" data-decimals="1" data-at="1.2">9.767,8</span> tỷ đồng</b> <span class="mono">(lũy kế 21/9/2026)</span>',
   '<b class="pos"><span data-count="343773" data-at="1.3">343.773</span></b> hộ dùng hóa đơn từ máy tính tiền, <b class="pos">+70%</b> so với 31/12/2025 <span class="mono">(17/9/2026)</span>',
-  'Thu từ thương mại điện tử và hộ kinh doanh 9 tháng ≈ <b class="pos"><span data-count="224700" data-at="1.4">224.700</span> tỷ</b>, <b class="pos">+26,6%</b>',
+  'Thu từ thương mại điện tử và hộ kinh doanh 9 tháng ≈ <b class="pos"><span data-count="224700" data-at="1.4">224.700</span> tỷ đồng</b>, <b class="pos">+26,6%</b>',
   'Khoảng <b class="pos">98%</b> hộ thuộc diện đã kê khai <span class="mono">(họp báo Bộ Tài chính, 17/6/2026; chưa nêu mốc tính)</span>',
 ];
 const warn = [
@@ -44,7 +44,7 @@ export default {
     <p><b class="neg">Hài hòa hơn</b> → chưa có dữ liệu chính thức</p>
   </div>
   ${foot({
-    limit: '98,2% ≈ 1.573.280 / 1.602.118 tờ khai chính thức (nhóm tự tính); nguồn không nêu mẫu số của 99,6%. Số 224.700 tỷ gộp cả thương mại điện tử, nên chưa tách được phần tăng do bỏ khoán. Nhóm <b>chưa tìm được số liệu chính thức</b> về chi phí tuân thủ (thời gian, tiền thuê kế toán, phần mềm) của hộ, nên chưa kết luận hộ nhỏ "được" hay "mất".',
+    limit: '98,2% ≈ 1.573.280 / 1.602.118 tờ khai chính thức (nhóm tự tính); nguồn không nêu mẫu số của 99,6%. Số 224.700 tỷ đồng gộp cả thương mại điện tử, nên chưa tách được phần tăng do bỏ khoán. Nhóm <b>chưa tìm được số liệu chính thức</b> về chi phí tuân thủ (thời gian, tiền thuê kế toán, phần mềm) của hộ, nên chưa kết luận hộ nhỏ "được" hay "mất".',
     src: 'Tạp chí Kinh tế – Tài chính, 2026a, 2026b; Mekong ASEAN, 2026',
   })}`,
   // hovering the results steadies the tower; the limitations (and the resting state) set it swaying

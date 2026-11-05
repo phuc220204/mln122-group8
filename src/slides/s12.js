@@ -65,7 +65,7 @@ export default {
     <section class="bt-cell edu" data-step="4">
       ${photo('bookkeeping.jpg', 'bt-photo')}
       <header>${icon('grad')}<h3>GIÁO DỤC</h3><b class="bt-big mono"><span data-count="91.2" data-decimals="1" data-at="1.2">91,2</span>%</b></header>
-      ${chips(['Cơ quan thuế phải hướng dẫn, mở đường dây nóng, công khai quy trình (NĐ 68, Điều 16)', 'tài liệu tuyên truyền "Những điều cơ bản người nộp thuế cần biết" (CV 6436/CT-PC)', '<b class="pos">91,2%</b> hộ dùng eTax Mobile'])}
+      ${chips(['Cơ quan thuế phải hướng dẫn, mở đường dây nóng, công khai quy trình (NĐ 68, Điều 16)', 'tài liệu tuyên truyền "Những điều cơ bản người nộp thuế cần biết" (CV 6436/CT-PC)', '<b class="pos">91,2%</b> hộ đang hoạt động dùng eTax Mobile (20/9/2026)'])}
     </section>
   </div>
   <div class="pipe" data-step="5">

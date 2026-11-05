@@ -151,11 +151,11 @@
    06 · LỢI ÍCH NHÓM
    ========================================================= */
 .s06-grid { margin-top: 64px; display: grid; grid-template-columns: 930px 1fr; gap: 48px; }
-.strata li { display: grid; grid-template-columns: 64px 1fr; gap: 18px; align-items: start; padding: 24px 0; border-top: 1px solid var(--line); }
+.strata li { display: grid; grid-template-columns: 64px 1fr; gap: 18px; align-items: start; padding: 20px 0; border-top: 1px solid var(--line); }
 .strata li:last-child { border-bottom: 1px solid var(--line); }
 .st-n { font-size: 15px; color: var(--red); padding-top: 6px; }
 .strata p { font: 400 25px/1.45 var(--f-sans); }
-.s06-q { margin-top: 60px; font-size: 32px; }
+.s06-q { margin-top: 28px; font-size: 30px; }
 .s06-right { display: flex; flex-direction: column; gap: 22px; }
 .s06-col .lbl { display: flex; align-items: center; gap: 10px; font-size: 14px; margin-bottom: 16px; }
 .s06-col .lbl .ico { width: 22px; height: 22px; }
@@ -503,3 +503,9 @@
 .glabel.isl { color: var(--gold); font-weight: 600; }
 .glabel.left { transform: translate(calc(-100% - 12px), -50%); }
 .glabel.left::before { left: auto; right: -11px; }
+
+/* v1.2: instructor feedback additions */
+.s14-cliff { margin-top: 18px; padding: 12px 22px; font-size: 21px; }
+.s17-ask { margin-top: 18px; font-size: 26px; }
+.sol-impl { margin-top: 8px; color: var(--ink-2); }
+.sol-impl b { color: var(--ink); }

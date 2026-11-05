@@ -16,6 +16,7 @@ export default {
         <li data-a="left"><span class="st-n mono">01</span><p>Lợi ích cá nhân là <b class="pos">cơ sở, nền tảng</b> ${pg('tr.128')}.</p></li>
         <li data-a="left"><span class="st-n mono">02</span><p>Lợi ích xã hội <b class="data">định hướng</b> lợi ích cá nhân ${pg('tr.132')}.</p></li>
         <li data-a="left"><span class="st-n mono">03</span><p>Lợi ích nhóm = liên kết cùng ngành, lĩnh vực để thực hiện tốt hơn lợi ích riêng ${pg('tr.132')}.</p></li>
+        <li data-a="left"><span class="st-n mono">04</span><p>Nhóm lợi ích = liên kết giữa các ngành, lĩnh vực <b class="data">khác nhau</b>, như liên kết 4 nhà ${pg('tr.132')}. Tiêu chí tích cực, tiêu cực dùng chung cho cả hai ${pg('tr.133')}.</p></li>
       </ol>
       <blockquote class="quote s06-q" data-a>Ở đâu không có lợi ích chung thì ở đó không thể có sự thống nhất về mục đích và cũng không thể có sự thống nhất về hành động được.<cite>— PH.ĂNGGHEN</cite></blockquote>
     </div>

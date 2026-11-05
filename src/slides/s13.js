@@ -1,16 +1,16 @@
 import { kicker, title, foot } from './_kit.js';
 
 const ok = [
-  '<b class="pos"><span data-count="1689266" data-at="1.2">1.689.266</span></b> tờ khai; thuế kê khai <b class="pos"><span data-count="9767.8" data-decimals="1" data-at="1.2">9.767,8</span> tỷ đồng</b> <span class="mono">(21/9/2026)</span>',
-  '<b class="pos"><span data-count="343773" data-at="1.3">343.773</span></b> hộ dùng hóa đơn từ máy tính tiền, <b class="pos">+70%</b> <span class="mono">(17/9/2026)</span>',
+  '<b class="pos"><span data-count="1689266" data-at="1.2">1.689.266</span></b> tờ khai (1.602.118 chính thức + 87.148 bổ sung); thuế kê khai <b class="pos"><span data-count="9767.8" data-decimals="1" data-at="1.2">9.767,8</span> tỷ đồng</b> <span class="mono">(lũy kế 21/9/2026)</span>',
+  '<b class="pos"><span data-count="343773" data-at="1.3">343.773</span></b> hộ dùng hóa đơn từ máy tính tiền, <b class="pos">+70%</b> so với 31/12/2025 <span class="mono">(17/9/2026)</span>',
   'Thu từ thương mại điện tử và hộ kinh doanh 9 tháng ≈ <b class="pos"><span data-count="224700" data-at="1.4">224.700</span> tỷ</b>, <b class="pos">+26,6%</b>',
-  'Khoảng <b class="pos">98%</b> hộ thuộc diện đã kê khai <span class="mono">(Bộ Tài chính, 17/6/2026)</span>',
+  'Khoảng <b class="pos">98%</b> hộ thuộc diện đã kê khai <span class="mono">(họp báo Bộ Tài chính, 17/6/2026; chưa nêu mốc tính)</span>',
 ];
 const warn = [
-  'Ngưỡng đổi chỉ sau <b class="neg">55 ngày</b> (05/3 → 29/4) → hộ phải xử lý lại kê khai quý I<div class="days"><span class="mono">05/3</span><i><b></b></i><span class="mono">29/4</span></div>',
+  'Ngưỡng đổi chỉ sau <b class="neg">55 ngày</b> (05/3 → 29/4): có lợi cho hộ, nhưng hộ phải xử lý lại kê khai quý I<div class="days"><span class="mono">05/3</span><i><b></b></i><span class="mono">29/4</span></div>',
   '"Vách đá" thuế GTGT ở mốc 1 tỷ → động cơ khai dưới ngưỡng, chia, tách doanh thu',
   'Tiểu thương lớn tuổi chưa theo kịp công nghệ',
-  'Đã có đề xuất nghiên cứu áp dụng lại khoán cho hộ dưới 5 tỷ → mâu thuẫn chưa khép',
+  'Đề xuất áp dụng lại khoán cho hộ dưới 5 tỷ đang được nghiên cứu, chưa có quyết định → mâu thuẫn chưa khép',
 ];
 const ring = (v, label) => `
   <div class="ring-m" data-a="scale">
@@ -26,7 +26,7 @@ export default {
   ${kicker('13', 'Đánh giá hiệu quả')}
   ${title('Thắng về <em class="pos">minh bạch</em> – chưa đủ dữ liệu để nói <em class="neg">"lớn hơn"</em>')}
   <div class="s13-grid">
-    <div class="rings">${ring(98.2, 'tờ khai đúng hạn')}${ring(99.6, 'nộp điện tử')}</div>
+    <div class="rings">${ring(98.2, 'đúng hạn · 21/9')}${ring(99.6, 'nộp điện tử · 21/9')}</div>
     <section class="ledger pos">
       <header class="h-lbl" data-a="fade"><b class="pos">✔ KẾT QUẢ</b> (số liệu Cục Thuế)</header>
       <ul>${ok.map((t) => `<li data-a data-gap="0.08">${t}</li>`).join('')}</ul>
@@ -44,7 +44,7 @@ export default {
     <p><b class="neg">Hài hòa hơn</b> → chưa có dữ liệu chính thức</p>
   </div>
   ${foot({
-    limit: 'Số 224.700 tỷ gộp cả thương mại điện tử, nên chưa tách được phần tăng do bỏ khoán. Nhóm <b>chưa tìm được số liệu chính thức</b> về chi phí tuân thủ (thời gian, tiền thuê kế toán, phần mềm) của hộ, nên chưa kết luận hộ nhỏ "được" hay "mất".',
+    limit: '98,2% ≈ 1.573.280 / 1.602.118 tờ khai chính thức (nhóm tự tính); nguồn không nêu mẫu số của 99,6%. Số 224.700 tỷ gộp cả thương mại điện tử, nên chưa tách được phần tăng do bỏ khoán. Nhóm <b>chưa tìm được số liệu chính thức</b> về chi phí tuân thủ (thời gian, tiền thuê kế toán, phần mềm) của hộ, nên chưa kết luận hộ nhỏ "được" hay "mất".',
     src: 'Tạp chí Kinh tế – Tài chính, 2026a, 2026b; Mekong ASEAN, 2026',
   })}`,
   // hovering the results steadies the tower; the limitations (and the resting state) set it swaying

@@ -1,8 +1,8 @@
 import { kicker, title, foot } from './_kit.js';
 
 const layers = [
-  ['Hành vi', 'Khai thấp doanh thu · chia, tách hộ, đứng tên người thân để lọt ngưỡng 1 tỷ · quay lại thu tiền mặt', 'Cán bộ <b class="neg">"chọn" hộ nào bị coi là khai sai</b>, hộ nào được bỏ qua, để đổi lấy lợi ích · làm ngơ hồ sơ tách hộ'],
-  ['Vì sao xếp vào lớp này', 'Một chủ thể tự làm, không có liên kết (tr.132)', 'Có quyền lực công tham gia, "thường không lộ diện" (tr.133)'],
+  ['Hành vi', 'Khai thấp doanh thu · chia, tách hộ, đứng tên người thân để lọt ngưỡng 1 tỷ · quay lại thu tiền mặt', 'Nguy cơ cán bộ <b class="neg">"chọn" hộ nào bị coi là khai sai</b>, hộ nào được bỏ qua, để đổi lấy lợi ích · làm ngơ hồ sơ tách hộ'],
+  ['Vì sao xếp vào lớp này', 'Một chủ thể tự làm, không có liên kết (tr.132)', 'Có quyền lực công tham gia, "thường không lộ diện" (tr.133); cán bộ và hộ khác lĩnh vực nên gần với "nhóm lợi ích" (tr.132)'],
   ['Khâu cần canh', 'Ngưỡng 1 tỷ', 'Kiểm tra (Luật QLT, Điều 22) và ấn định sau kê khai (Điều 24)'],
 ];
 
@@ -12,7 +12,7 @@ export default {
   scene: 'risk',
   html: `
   ${kicker('11', 'Nguy cơ "lợi ích nhóm"')}
-  ${title('Bỏ khoán không xóa "vùng xám" – <em class="neg">dời nó ra sau kê khai</em>', 's')}
+  ${title('Bỏ khoán chưa xóa "vùng xám" – <em class="neg">nguy cơ dời ra sau kê khai</em>', 's')}
   <div class="s11-grid">
     <div class="s11-left">
       <article class="case" data-a="left">
@@ -37,7 +37,7 @@ export default {
       <div class="ly-row ly-head" data-a="fade">
         <span></span>
         <div class="ly-a"><b>Lớp A – Vi phạm cá nhân</b><small>(chưa phải lợi ích nhóm)</small></div>
-        <div class="ly-b"><b>Lớp B – Lợi ích nhóm tiêu cực</b><small>(có công chức tham gia, tr.133)</small></div>
+        <div class="ly-b"><b>Lớp B – Nguy cơ lợi ích nhóm tiêu cực</b><small>(có công chức tham gia, tr.133)</small></div>
       </div>
       ${layers.map(([k, a, b]) => `
         <div class="ly-row" data-a="right" data-gap="0.12">
@@ -53,7 +53,7 @@ export default {
     <span class="bt">Nhà lập pháp đã tính đến rủi ro "chia, tách". NQ 43/2026/QH16 <b>không giảm thuế</b> cho <b>doanh nghiệp</b> hình thành do chia, tách nếu tổng doanh thu vượt 10 tỷ.</span>
   </div>
   ${foot({
-    limit: 'Điều khoản loại trừ của NQ 43 áp dụng cho doanh nghiệp, không trực tiếp cho hộ kinh doanh. Nguy cơ tách hộ là <b>phân tích của nhóm</b>.',
+    limit: 'Lớp B là <b>nguy cơ do nhóm suy luận</b>: vụ 2020 xảy ra dưới cơ chế khoán, không khái quát cho đội ngũ cán bộ thuế. Điều khoản loại trừ của NQ 43 áp dụng cho doanh nghiệp, không trực tiếp cho hộ; nguy cơ tách hộ là <b>phân tích của nhóm</b>.',
     src: 'Vietnamnet, 2020; Quốc hội, 2025b; Bộ GD&ĐT, 2019, tr.132–133, 137; Tạp chí Kinh tế – Tài chính, 2026c; BCH Trung ương, 2016',
   })}`,
   enter(el, tl) {
